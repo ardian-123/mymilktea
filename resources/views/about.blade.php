@@ -43,7 +43,7 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-primary-200 to-milktea-200 rounded-3xl blur-2xl opacity-30"></div>
                 <div class="relative bg-white rounded-3xl shadow-xl p-8">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558855410-3112e253d704?w=800&auto=format&fit=crop&q=80" 
+                        <img src="https://images.squarespace-cdn.com/content/v1/5edfb8e7559cd9129deae815/1591881590337-6LK83RWZERIALYSRSA56/WechatIMG126.jpeg" 
                              alt="Delicious Milk Tea" 
                              class="w-full h-full object-cover">
                     </div>

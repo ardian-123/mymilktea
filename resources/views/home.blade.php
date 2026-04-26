@@ -30,19 +30,15 @@
                     <div class="text-center">
                         <div class="text-2xl font-bold text-gray-900">20+</div>
                         <div class="text-sm text-gray-500">Unique Flavors</div>
-                    </div>
                     <div class="w-px h-10 bg-gray-300"></div>
                     <div class="text-center">
                         <div class="text-2xl font-bold text-gray-900">100%</div>
                         <div class="text-sm text-gray-500">Fresh Ingredients</div>
-                    </div>
                     <div class="w-px h-10 bg-gray-300"></div>
                     <div class="text-center">
                         <div class="text-2xl font-bold text-gray-900">5k+</div>
                         <div class="text-sm text-gray-500">Happy Customers</div>
-                    </div>
                 </div>
-            </div>
             <div class="relative">
                 <div class="absolute inset-0 bg-gradient-to-r from-primary-200 to-milktea-200 rounded-full blur-3xl opacity-30"></div>
                 <div class="relative bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
@@ -56,11 +52,8 @@
                             </div>
                             <span class="text-sm font-semibold text-gray-700">4.9 Rating</span>
                         </div>
-                    </div>
                 </div>
-            </div>
         </div>
-    </div>
 </section>
 
 <!-- Categories Section -->
@@ -85,7 +78,6 @@
             </a>
             @endforeach
         </div>
-    </div>
 </section>
 
 <!-- Featured Products -->
@@ -106,10 +98,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach($featuredProducts as $product)
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                <div class="aspect-[4/3] bg-gradient-to-br from-primary-100 to-milktea-100 flex items-center justify-center">
-                    <svg class="w-24 h-24 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                    </svg>
+                <div class="aspect-[4/3] bg-gradient-to-br from-primary-100 to-milktea-100 flex items-center justify-center relative overflow-hidden">
+                    @if($product->image)
+                        <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
+                    @else
+                        <svg class="w-24 h-24 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    @endif
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
@@ -128,7 +124,6 @@
                         </button>
                     </form>
                 </div>
-            </div>
             @endforeach
         </div>
         <div class="mt-8 text-center md:hidden">
@@ -139,7 +134,6 @@
                 </svg>
             </a>
         </div>
-    </div>
 </section>
 
 <!-- Why Choose Us -->
@@ -177,7 +171,6 @@
                 <h3 class="text-xl font-bold text-gray-900 mb-3">Made with Love</h3>
                 <p class="text-gray-600">Our baristas pour their heart into every cup. We treat every customer like family.</p>
             </div>
-        </div>
     </div>
 </section>
 
@@ -197,9 +190,7 @@
                     <div class="ml-3">
                         <div class="font-semibold text-gray-900">Jessica M.</div>
                         <div class="text-sm text-gray-500">Verified Customer</div>
-                    </div>
                 </div>
-            </div>
             <div class="bg-white rounded-2xl shadow-lg p-8">
                 <div class="flex text-yellow-400 mb-4">★★★★★</div>
                 <p class="text-gray-600 mb-6">"Bubble Bliss has the most authentic Taiwanese milk tea outside of Taiwan. The cheese foam series is a game changer. Highly recommend!"</p>
@@ -208,9 +199,7 @@
                     <div class="ml-3">
                         <div class="font-semibold text-gray-900">David K.</div>
                         <div class="text-sm text-gray-500">Verified Customer</div>
-                    </div>
                 </div>
-            </div>
             <div class="bg-white rounded-2xl shadow-lg p-8">
                 <div class="flex text-yellow-400 mb-4">★★★★★</div>
                 <p class="text-gray-600 mb-6">"I love how customizable everything is. The staff is so friendly and always remembers my order. Best bubble tea shop in the city!"</p>
@@ -219,11 +208,8 @@
                     <div class="ml-3">
                         <div class="font-semibold text-gray-900">Amy L.</div>
                         <div class="text-sm text-gray-500">Verified Customer</div>
-                    </div>
                 </div>
-            </div>
         </div>
-    </div>
 </section>
 
 <!-- CTA Section -->
@@ -242,8 +228,6 @@
                     Browse Our Menu
                 </a>
             </div>
-        </div>
     </div>
 </section>
 @endsection
-

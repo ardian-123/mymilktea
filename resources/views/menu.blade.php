@@ -42,10 +42,14 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach($products as $product)
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="aspect-[4/3] bg-gradient-to-br from-primary-100 to-milktea-100 flex items-center justify-center relative">
-                        <svg class="w-24 h-24 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                        </svg>
+                    <div class="aspect-[4/3] bg-gradient-to-br from-primary-100 to-milktea-100 flex items-center justify-center relative overflow-hidden">
+                        @if($product->image)
+                            <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
+                        @else
+                            <svg class="w-24 h-24 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        @endif
                         @if($product->is_featured)
                         <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
                             ⭐ Featured
@@ -74,7 +78,6 @@
                             </button>
                         </form>
                     </div>
-                </div>
                 @endforeach
             </div>
         @endif
